@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Natália ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family: "Georgia", serif;
+background: linear-gradient(135deg,#ff7a9c,#ffb3c7,#ffdbe5);
+color:#3a0d1c;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+max-width:800px;
+padding:30px;
+}
+
+h1{
+font-size:50px;
+color:#c9184a;
+margin-bottom:10px;
+}
+
+button{
+padding:16px 30px;
+font-size:20px;
+border:none;
+border-radius:30px;
+background:#c9184a;
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.carta{
+display:none;
+height:100vh;
+overflow-y:auto;
+padding:40px;
+line-height:1.8;
+font-size:20px;
+text-align:left;
+background:white;
+border-radius:10px;
+box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.heart{
+position:fixed;
+top:-10px;
+font-size:24px;
+color:red;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container" id="inicio">
+
+<h1>Natália ❤️</h1>
+
+<p>
+Tenho algo que escrevi para você.<br>
+Mas precisa abrir a carta para ler.
+</p>
+
+<button onclick="abrirCarta()" id="botao">Abrir a carta</button>
+
+</div>
+
+
+<div class="carta" id="carta">
+
+<h1 style="text-align:center;">Para Natália</h1>
+
+<p>
+
+Natália,
+
+Entre todas as coincidências que poderiam acontecer no universo,
+a mais bonita foi você aparecer na minha vida.
+
+Em um mundo cheio de caminhos,
+milhões de histórias
+e bilhões de pessoas…
+
+de alguma forma o destino fez nossas vidas se encontrarem.
+
+E desde então,
+cada dia ganhou um significado diferente.
+
+</p>
+
+<p>
+
+Você não é apenas alguém especial para mim.
+
+Você é aquela pessoa que muda completamente
+o jeito que o mundo parece.
+
+Seu sorriso consegue iluminar dias que estavam escuros,
+sua voz acalma coisas dentro de mim
+que ninguém mais consegue.
+
+E o seu abraço…
+
+ah, o seu abraço parece casa.
+
+</p>
+
+<p>
+
+Hoje é o Dia da Mulher.
+
+Mas sinceramente,
+se existisse um dia que realmente representasse
+tudo que você é,
+um único dia não seria suficiente.
+
+Porque você é forte,
+incrível,
+inteligente,
+carinhosa,
+e tem uma beleza que vai muito além do que os olhos conseguem ver.
+
+Você tem um coração raro.
+
+</p>
+
+<p>
+
+Natália,
+eu não quero apenas viver momentos com você.
+
+Eu quero viver uma vida inteira.
+
+Quero que nossos caminhos continuem andando juntos,
+quero que nossas histórias se misturem,
+quero que o futuro tenha seu nome escrito nele.
+
+Porque quando eu penso no amanhã…
+
+eu penso em você.
+
+</p>
+
+<p>
+
+E se um dia alguém me perguntar
+qual foi a melhor coisa que já me aconteceu na vida,
+
+eu vou responder sem hesitar:
+
+foi ter encontrado você.
+
+</p>
+
+<p>
+
+Feliz Dia da Mulher,
+para a mulher que mudou meu mundo.
+
+Minha namorada.
+
+Meu amor.
+
+E se o destino permitir…
+
+minha futura esposa.
+
+❤️
+
+</p>
+
+</div>
+
+
+<script>
+
+function abrirCarta(){
+
+document.getElementById("inicio").style.display="none"
+document.getElementById("carta").style.display="block"
+
+document.body.style.alignItems="flex-start"
+document.body.style.overflow="auto"
+
+}
+
+function criarCoracao(){
+
+const heart=document.createElement("div")
+heart.classList.add("heart")
+heart.innerHTML="❤"
+heart.style.left=Math.random()*100+"vw"
+heart.style.animationDuration=(Math.random()*4+3)+"s"
+
+document.body.appendChild(heart)
+
+setTimeout(()=>heart.remove(),7000)
+
+}
+
+setInterval(criarCoracao,400)
+
+</script>
+
+</body>
+</html>
